@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <title>T-Shirt Designing Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="Index_1.css">
+    </head>
+    <body>
+        <header>
+
+            <div id="menu-bar" class="fas fa-bars"></div>
+
+           <a href="#" class="logo"><span>T - </span>Shadow</a>
+            <nav class="navbar">
+                <a href="index.html">home</a>
+                <a href="about.html">About</a>
+                <a href="Gallery.html">gallery</a>
+                <a href="Review.html">review</a>
+                <a href="contact.html">contact</a>
+            </nav>
+
+            <div class="icons">
+             <i class="fas fa-search" id="search-btn"></i>
+             <i class="fas fa-user" id="login-btn"></i>
+            </div>
+
+            <form action="" class="search-bar-container">
+                <input type="search" id="search-bar" placeholder="search here...">
+                <label for="search-bar" class="fas fa-search"></label>
+            </form>
+        </header>
+
+     <div class="login-form-container">
+         <i class="fas fa-times" id="form-close"></i>
+         <form action="logincode.jsp" method="Post">
+             <h3>login</h3>
+             <input type="email" class="box" name="txtemail" id="e1" placeholder="enter your email" required>
+             <input type="password" class="box" name="txtpass" id="p1" placeholder="enter your password" required>
+             <input type="submit" value="login now" class="btn">
+             <input type="checkbox" id="remember">
+             <label for="remember">remember me</label>
+             <p>forget password? <a href="Forget.jsp">click here</a></p>
+             <p>don't have any account? <a href="Register.html">register now</a></p>
+            </form>
+     </div>
+
+     <div>
+        <div class="contact">
+            <p id="p1">Contact Us</p>
+            <p id="p2">Want to get in touch? We'd love to hear from you. Here's how you can reach us...</p>
+           
+            <div class="contact1">
+               <i class="fa fa-envelope"></i>
+               <address> 
+               Aman Dubey : <a href="mailto:dubey01aman@gmail.com">dubey01aman@gmail.com</a><br>
+               Anubhav Thakur : <a href="mailto:anubhavthakur@gmail.com">anubhavthakur@gmail.com</a><br>
+               Anuj Trivedi : <a href="mailto:anuj001@gmail.com">anujtrivedi001@gmail.com</a><br>
+               Bhavesh Modi : <a href="mailto:bhaveshmodi@gmail.com">bhaveshmodi@gmail.com</a>
+               </address>
+            </div>
+            
+            <div class="row">
+        
+                <form action="ContactResponse.jsp" method="Post">
+                    <div class="inputBox">
+                        <input type="text" id="name1" name="name" placeholder="name" required>
+                        <input type="email" id="email1" name="email" placeholder="email" required>
+                    </div>
+                    <div class="inputBox">
+                        <input type="number" id="number1" name="number" placeholder="number" required>
+                        <input type="text" id="subject1" name="subject" placeholder="subject" required>
+                    </div>
+                    <textarea placeholder="message" name="message" id="message1" cols="30" rows="10" required></textarea>
+                    <input type="submit" onclick="return Contact();" class="btn" value="send message">
+                </form>
+        
+            </div>
+            
+
+    </body>
+    <script src="Index.js"></script>
+    <script language="Javascript">
+            function Contact()
+            { 
+              var name,email,number,subject ,message;
+              name=document.getElementById("name1").value;
+              subject=document.getElementById("subject1").value;
+              message=document.getElementById("message1").value;
+              
+             
+             if(name!="")
+             {
+              for(i=0;i<name.length;i++)
+              {   
+                ascii=name.charCodeAt(i);
+                if(!((ascii>=97&& ascii<=122) ||(ascii>=65&& ascii<=90) || (ascii==32)))
+               {    
+                 alert("Invalid name,Enter character only");
+                 document.getElementById("name1").focus();
+                 document.getElementById("name1").select();
+                 return false;
+               }
+              } 
+             }
+             
+            if(subject!="")
+             {
+              for(i=0;i<subject.length;i++)
+             {   
+              ascii=subject.charCodeAt(i);
+              if(!((ascii>=97&& ascii<=122) ||(ascii>=65&& ascii<=90) || (ascii==32)))
+              {    
+                alert("Invalid Subject,Enter character only");
+                document.getElementById("subject1").focus();
+                document.getElementById("subject1").select();
+                return false;
+              }
+             } 
+            }
+            
+           if(message!="")
+           {
+             for(i=0;i<message.length;i++)
+             {   
+              ascii=message.charCodeAt(i);
+              if(!((ascii>=97&& ascii<=122) ||(ascii>=65&& ascii<=90) || (ascii==32)))
+              {    
+                alert("Invalid Message,Enter character only");
+                document.getElementById("message1").focus();
+                document.getElementById("message1").select();
+                return false;
+              }
+             } 
+           }
+           alert("Submitted Successfully.");
+           return true;
+            }
+    </script>
+</html>

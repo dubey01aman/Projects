@@ -1,0 +1,202 @@
+.drawing-area{
+    position: absolute;
+    top: 60px;
+    left: 122px;
+    z-index: 10;
+    width: 200px;
+    height: 400px;
+}
+
+.canvas-container{
+    width: 200px; 
+    height: 400px; 
+    position: relative;
+    user-select: none;
+}
+
+#tshirt-div{
+    width: 452px;
+    height: 540px;
+    position: relative;
+    background-color: #fff;
+    margin-left: 35%;
+    margin-top: 9%;
+}
+
+
+#canvas{
+    position: absolute;
+    width: 452px;
+    height: 560px;
+    left: 0px; 
+    top: 0px; 
+    user-select: none; 
+    cursor: default;
+}
+
+.tdtheme{
+    width: 15%;
+    height: 35px;
+    border-radius: 11px;
+    font-family: bold;
+    font-size: 23px;  
+    text-align: center;
+
+}
+a{ 
+    text-decoration: none;
+    color: white;
+
+}
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 16%;
+    left: 68%;
+    border: solid;
+    border-radius: 12px;
+    width: 30%;
+    border-color: black;
+    right: 15px;
+    background-image: url('001.png')
+}
+
+.tdtheme:hover{
+
+    transform: scale(1.1);
+
+}
+.final-tshirt
+{
+    width:80%;
+    margin-left: 5%;
+
+}
+.tshirt-backgroundpicture{
+    margin-top: -1%;
+    margin-left: 0%;
+}
+.tshirt-canvas{
+    width:"320" ;
+    height:"500" ;
+    margin-left:-20%;
+}
+#L38formtools{
+    border: solid;
+    border-radius:7px ;
+    border-color: black;
+    width: 19%; 
+    margin-top: -34.5%; 
+    margin-left: 1%;
+    position: fixed;
+}
+#L41{
+    /* CSS use for designing tools heading */
+    font-size:32px;
+    text-align: center;
+    color:white;
+    font-weight:bold;
+}
+
+.L46effects{
+    display: inline-block;
+    cursor: pointer;
+}
+
+#L76tshirtdesign{
+    font-size: 22px; 
+    font-weight: 600;
+}
+#L99{
+    font-size:32px;
+    text-align: center;
+    color:white;
+    font-weight:bold;
+}
+#L105{
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+    bottom: 1px;
+}
+#L106downloadtshirtbutton{
+    height: 200%; 
+    width: 105px;
+    border-radius: 1px;
+    margin-left: 4%; 
+    margin-top: -15%;
+}
+
+#L113{
+    color: black;
+    font-size: 20px;
+    position: relative;
+    bottom: 10px;
+}
+
+/* T-Shirt Size line132 */
+
+#tshirt-size{
+    height: 26px;
+}
+#L132{
+    font-size: 22px;
+    font-weight: 600;
+}
+#L133tshirt-quantity{
+    height: 26px;
+}
+
+/* dilevery address line160 */
+
+#L155{
+   
+    width: 250px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+#L163{
+    width:250px;
+    font-size: 15px;
+    width:200px;
+    height:30px;
+    border-radius: 15px;
+    background-color: white;
+    color:black;
+    text-align: center;
+}
+#L227{
+    width:250px; 
+    height:70px; 
+    border-radius: 5px; 
+    background-color:white;
+    color: black;
+}
+#L235{
+    width:250px; 
+    height:70px; 
+    border-radius: 5px; 
+    background-color:white;
+    color: black;
+}
+#L241{
+    margin-left: 30%; 
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border-radius: 30px;
+    background-color: black;
+    color: white
+}
+#L242{
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border-radius: 30px;
+    background-color: black;
+    color: white
+}
+
+    

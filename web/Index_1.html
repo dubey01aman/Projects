@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <title>Home</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="Index_1.css">
+        <script>
+            window.history.forward();
+        </script>
+    </head>
+    <body>
+        <header>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+           <a href="#" class="logo"><span>T - </span>Shadow</a>
+            <nav class="navbar">
+                <a href="Index_1.html">home</a>
+                <a href="about.html">About</a>
+                <a href="Gallery.html">gallery</a>
+                <a href="Review.html">review</a>
+                <a href="contact.html">contact</a>
+            </nav>
+
+            <div class="icons">
+             <i class="fas fa-search" id="search-btn"></i>
+             <i class="fas fa-user" id="login-btn"></i>
+            </div>
+
+            <form action="" class="search-bar-container">
+                <input type="search" id="search-bar" placeholder="search here...">
+                <label for="search-bar" class="fas fa-search"></label>
+            </form>
+        </header>
+
+     <div class="login-form-container">
+         <i class="fas fa-times" id="form-close"></i>
+         <form action="logincode.jsp" method="Post">
+             <h3>login</h3>
+             <input type="email" name="txtemail" id="e1" class="box" placeholder="enter your email" required>
+             <input type="password" class="box" name="txtpass" id="p1" placeholder="enter your password" required>
+             <input type="submit" value="login now" class="btn">
+             <input type="checkbox" id="remember">
+             <label for="remember">remember me</label>
+             <p>forget password? <a href="Forget.jsp">click here</a></p>
+             <p>don't have any account? <a href="Register.html">register now</a></p>
+            </form>
+     </div>
+
+     <div class="home">
+         <img src="12.jpg" alt="">
+     </div>
+     <div class="home2">
+         <img src="d5.png" alt="">
+     </div>
+     <div class="home3">
+         <img src="d6.png" alt="">
+     </div>
+     <div class="home4">
+         <img src="Hpic.png" alt="">
+     </div>
+
+    </body>
+    <script src="Index.js"></script>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <title>T-Shirt Designing Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="Index_1.css">
+        <link rel="stylesheet" href="Register.css">
+    </head>
+    <body>
+        <header>
+
+            <div id="menu-bar" class="fas fa-bars"></div>
+
+           <a href="#" class="logo"><span>T - </span>Shadow</a>
+            <nav class="navbar">
+                <a href="index.html">home</a>
+                <a href="about.html">About</a>
+                <a href="Gallery.html">gallery</a>
+                <a href="Review.html">review</a>
+                <a href="contact.html">contact</a>
+            </nav>
+
+            <div class="icons">
+             <i class="fas fa-search" id="search-btn"></i>
+             <i class="fas fa-user" id="login-btn"></i>
+            </div>
+
+            <form action="" class="search-bar-container">
+                <input type="search" id="search-bar" placeholder="search here...">
+                <label for="search-bar" class="fas fa-search"></label>
+            </form>
+        </header>
+
+     <div class="login-form-container">
+         <i class="fas fa-times" id="form-close"></i>
+         <form action="">
+             <h3>login</h3>
+             <input type="email" class="box" placeholder="enter your email">
+             <input type="password" class="box" placeholder="enter your password">
+             <input type="submit" value="login now" class="btn">
+             <input type="checkbox" id="remember">
+             <label for="remember">remember me</label>
+             <p>forget password? <a href="Forget.jsp">click here</a></p>
+             <p>don't have any account? <a href="Register.html">register now</a></p>
+            </form>
+     </div>
+
+     <div class="container">
+        <div class="title"><center>Registration</center></div>
+        <div class="content">
+            <form action="Register.jsp" method="Post">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Full Name</span>
+                <input type="text" name="fname" id="fname" placeholder="Enter your name" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Username</span>
+                <input type="text" name="username" placeholder="Enter your username" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Email</span>
+                <input type="text" name="email" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Phone Number</span>
+                <input type="text" name="phone" id="phone" maxlength="10" placeholder="Enter your number" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Password</span>
+                <input type="password" name="pass" placeholder="Enter your password" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Confirm Password</span>
+                <input type="password" name="cpass" placeholder="Confirm your password" required>
+              </div>
+            </div>
+            <div class="gender-details">
+              <input type="radio" value="Male" name="gender" id="dot-1">
+              <input type="radio" value="Female" name="gender" id="dot-2">
+              <input type="radio" value="Other" name="gender" id="dot-3">
+              <span class="gender-title">Gender</span>
+              <div class="category">
+                <label for="dot-1">
+                <span class="dot one"></span>
+                <span class="gender" style="font-size:15px;">Male</span>
+              </label>
+              <label for="dot-2">
+                <span class="dot two"></span>
+                <span class="gender" style="font-size:15px;">Female</span>
+              </label>
+              <label for="dot-3">
+                <span class="dot three"></span>
+                <span class="gender" style="font-size:15px;">Prefer not to say</span>
+                </label>
+              </div>
+            </div>
+            <div class="button">
+              <input type="submit" onclick=" return validate();" value="Register">
+            </div>
+          </form>
+        </div>
+      </div>
+    
+    <script src="Index.js"></script>
+    <Script>
+     function validate()
+     {
+      String fname,phone;   
+       fname=document.getElementById("fname").value;
+       phone=document.getElementById("phone").value;
+       pass=document.getElementById("pass").value;
+       cpass=document.getElementById("cpass").value;
+       if(fname!="")
+             {
+              for(i=0;i<fname.length;i++)
+              {   
+                ascii=fname.charCodeAt(i);
+                if(!((ascii>=97&& ascii<=122) ||(ascii>=65&& ascii<=90) || (ascii==32)))
+               {    
+                 alert("Invalid name,Enter character only");
+                 document.getElementById("fname").focus();
+                 document.getElementById("fname").select();
+                 return false;
+               }
+              } 
+             }
+        if(pass!="" && cpass!="")
+        {
+            if(pass.localeCompare(cpass)!=0)
+            {
+                alert("Incorrect Password !");
+                document.getElementById("cpass").focus();
+                document.getElementById("cpass").select();
+            }
+        }
+            
+        alert("Register Successfully");
+        return true;
+         
+     }    
+        
+    </Script>
+</html>
